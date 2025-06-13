@@ -1,0 +1,27 @@
+{
+  "name": "wordpress-boilerplate-theme",
+  "version": "1.0.0",
+  "description": "A WordPress Boilerplate Theme Using Vite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+		"autoprefixer": "^10.4.20",
+		"dotenv": "^16.4.5",
+		"glob": "^11.0.0",
+		"path": "^0.12.7",
+		"postcss": "^8.4.49",
+		"postcss-nested": "^7.0.2",
+		"postcss-sort-media-queries": "^5.2.0",
+		"sass": "^1.80.6",
+		"vite": "^4.0.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^4.0.0",
+		"@vitejs/plugin-vue": "^4.0.0",
+		"postcss-url": "^10.1.3"
+	},
+  "author": "Reander Agulto",
+  "license": "MIT"
+}
