@@ -1,0 +1,349 @@
+@use 'sass:map';
+@use '../abstracts' as abs;
+
+/* Container */
+.container {
+    width: 100%; 
+    max-width: map.get(abs.$containers, lg);
+    margin-inline: auto;
+    padding-inline: map.get(abs.$padding, sm);
+
+    &::after, 
+    &::before {
+        display: none;
+    }
+
+    @include abs.media-min(md) {
+        padding-inline: map.get(abs.$padding, md);
+    }
+
+    @include abs.media-min(lg) {
+        padding-inline: 0;
+    }
+}
+
+.row {
+    &::after, 
+    &::before {
+        display: none;
+    }
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+    
+    &-in-lg {
+        @include abs.media-min-max(md, lg) {
+            display: none;
+        }
+    }
+
+    &-in-md {
+        @include abs.media-min-max(sm, md) {
+            display: none;
+        }
+    }
+
+    &-in-sm {
+        @include abs.media-max(sm) {
+            display: none;
+        }
+    }
+}
+
+/* Text */
+.text {
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-white {
+        color: abs.clr(color-white);
+    }
+
+    &-black {
+        color: abs.clr(color-black, 50);
+    }
+
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-hidden {
+        font-size: 0;
+    }
+
+    &-bold {
+        font-weight: 700;
+    }
+
+    &-royal-blue {
+        color: abs.clr(color-blue);
+    }
+
+    &-gray {
+        color: abs.clr(color-black, 20);
+    }
+}
+
+/* Flex */
+.flex {
+    display: flex;
+
+    &-col {
+        flex-direction: column;
+    }
+
+    &-row {
+        flex-direction: row;
+    }
+
+    &-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &-col-reverse {
+        flex-direction: column-reverse;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-row-wrap {
+        flex-flow: row wrap;
+    }
+
+    &-col-wrap {
+        flex-flow: column wrap;
+    }
+
+    &-row-nowrap {
+        flex-flow: row nowrap;
+    }
+
+    &-col-nowrap {
+        flex-flow: column nowrap;
+    }
+
+    &-reverse-wrap {
+        flex-flow: row-reverse wrap;
+    }
+}
+/* Flex Justify */
+.justify {
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-end {
+        justify-content: flex-end;
+    }
+
+    &-center {
+        justify-content: center;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+}
+/* Flex Align */
+.align {
+    &-center {
+        align-items: center;
+    }
+
+    &-start {
+        align-items: flex-start;
+    }
+
+    &-end {
+        align-items: flex-end;
+    }
+
+    &-stretch {
+        align-items: stretch;
+    }
+}
+
+/* Display */
+.d {
+    &-none {
+        display: none !important;
+    }
+
+    &-block {
+        display: block !important;
+    }
+
+    &-inline {
+        display: inline !important;
+    }
+}
+
+/* Width */
+.w {
+    &-full {
+        width: 100%;
+    }
+
+    &-half {
+        width: 50%;
+    }
+
+    &-max-content {
+        width: -moz-max-content;
+        width: max-content;
+    }
+
+    &-min-content {
+        width: -moz-min-content;
+        width: min-content;
+    }
+}
+
+/* Margins */
+.m {
+    &x-auto {
+        margin-inline: auto;
+    }
+
+    &y-auto {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &t-auto {
+        margin-top: auto;
+    }
+
+    &b-auto {
+        margin-bottom: auto;
+    }
+
+    &r-auto {
+        margin-right: auto;
+    }
+
+    &l-auto {
+        margin-left: auto;
+    }
+}
+
+/* Positions */
+.position {
+    &-relative {
+        position: relative;
+    }
+
+    &-inherit {
+        position: inherit;
+    }
+
+    &-absolute {
+        position: absolute;
+    }
+
+    &-sticky {
+        position: sticky;
+    }
+
+    &-static {
+        position: static;
+    }
+
+    &-fixed {
+        position: fixed;
+    }
+}
+
+/** Site Section **/
+.site-section {
+    padding: 32px 16px;
+
+    &__half-top {
+        padding: 32px 16px 24px;
+    }
+
+    &__half-bottom {
+        padding: 24px 16px 32px;
+    }
+
+    &__no-top {
+        padding: 0px 16px 32px;
+    }
+
+    &__no-bottom {
+        padding: 32px 16px 0px;
+    }
+
+    &__half-bottom-no-top {
+        padding: 0px 16px 24px;
+    }
+
+    &__half-top-no-bottom {
+        padding: 24px 16px 0px;
+    }
+
+    &__background {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: color-dodge;
+        opacity: 0.5;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        z-index: 1;
+    }
+
+    @include abs.media-min(md) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        &__half-top {
+            padding-top: 40px;
+            padding-bottom: 80px;
+        }
+
+        &__half-bottom {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        &__no-top {
+            padding-top: 0;
+            padding-bottom: 80px;
+        }
+
+        &__no-bottom {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        &__half-bottom-no-top {
+            padding-top: 0;
+            padding-bottom: 40px;
+        }
+
+        &__half-top-no-bottom {
+            padding-top: 40px;
+            padding-bottom: 0px;
+        }
+    }
+}

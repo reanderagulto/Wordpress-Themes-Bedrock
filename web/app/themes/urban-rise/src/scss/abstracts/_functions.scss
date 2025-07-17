@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use './variables' as *;
+
+@function clr($base, $shade: base) {
+  @if map.has-key($colors, $base) {
+    $color-map: map.get($colors, $base);
+
+    @if map.has-key($color-map, $shade) {
+      @return map.get($color-map, $shade);
+    } @else {
+      @error "Shade `#{$shade}` does not exist in `#{$base}` color map.";
+    }
+  } @else {
+    @error "Base color `#{$base}` does not exist in `$colors` map.";
+  }
+}

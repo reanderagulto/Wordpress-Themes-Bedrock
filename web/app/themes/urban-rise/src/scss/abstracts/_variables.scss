@@ -1,0 +1,94 @@
+/** Font Variables*/
+$font-poppins: "Poppins", sans-serif;
+$font-family-default: $font-poppins;
+$font-family-title: $font-poppins;
+$font-size-default: 16px;
+$font-size-title: 18px;
+
+/** Color Map **/
+$colors: (
+    color-blue: (
+        10: #CCD5DB,
+        20: #AABAC4,
+        30: #8097A6,
+        40: #557488,
+        50: #2A526B,
+        base: #002F4D,
+        60: #002740,
+        70: #001F33,
+        80: #001827,
+        90: #00101A,
+        100: #00090F
+    ),
+    color-orange: (
+        10: #FFE6CC,
+        20: #FFD5AA,
+        30: #FFC180,
+        40: #FFAC55,
+        50: #FF972A,
+        base: #FF8200,
+        60: #D56C00,
+        70: #AA5700,
+        80: #804100,
+        90: #552B00,
+        100: #331A00
+    ),
+    color-teal: (
+        10: #DEF1F0,
+        20: #C9E7E5,
+        30: #AEDCD9,
+        40: #92D0CC,
+        50: #77C4BF,
+        base: #5CB8B2,
+        60: #4D9994,
+        70: #3D7B77,
+        80: #2E5C59,
+        90: #1F3D3B,
+        100: #122524
+    ), 
+    color-black: (
+        10: #c5c7d5,
+        20: #6B6C77,
+        30: #6c757d,
+        50: #242424,
+        base: #000000
+    ),
+    color-white: (
+        40: #EFF1FF,
+        50: #F3F3F3,
+        base: #FFFFFF,
+    ),
+    input-color: (
+        primary: #007bff,
+        secondary: #6c757d,
+        success: #28a745,
+        info: #17a2b8,
+        warning: #ffc107,
+        danger: #dc3545,
+        light: #f8f9fa,
+        dark: #343a40
+    )
+);
+
+/** Global Transition **/
+$default-transition: .3s cubic-bezier(.4, 0, .2, 1) !default;
+$hover-transition: .3s ease-out !default;
+
+/** Breakpoints **/
+$breakpoints: (
+  'xsm': 320px,
+  'sm': 767px,
+  'md': 1024px,
+  'lg': 1199px,
+  'xl': 1336px,
+  'xxl': 1440px
+) !default;
+
+$containers: (
+    'lg': 1280px
+) !default;
+
+$padding: (
+    'sm': 20px,
+    'md': 32px
+) !default;

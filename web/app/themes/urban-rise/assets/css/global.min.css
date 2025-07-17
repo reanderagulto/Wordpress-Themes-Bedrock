@@ -1,0 +1,450 @@
+/********************
+ *
+ * Global Stylesheets
+ *
+ ********************/
+/** Base Styling **/
+/** Font Variables*/
+/** Color Map **/
+/** Global Transition **/
+/** Breakpoints **/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+.container::after, .container::before {
+  display: none;
+}
+
+.row::after, .row::before {
+  display: none;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-white {
+  color: #FFFFFF;
+}
+.text-black {
+  color: #242424;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-hidden {
+  font-size: 0;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-royal-blue {
+  color: #002F4D;
+}
+.text-gray {
+  color: #6B6C77;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row-wrap {
+  flex-flow: row wrap;
+}
+.flex-col-wrap {
+  flex-flow: column wrap;
+}
+.flex-row-nowrap {
+  flex-flow: row nowrap;
+}
+.flex-col-nowrap {
+  flex-flow: column nowrap;
+}
+.flex-reverse-wrap {
+  flex-flow: row-reverse wrap;
+}
+
+/* Flex Justify */
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Flex Align */
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-stretch {
+  align-items: stretch;
+}
+
+/* Display */
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-inline {
+  display: inline !important;
+}
+
+/* Width */
+.w-full {
+  width: 100%;
+}
+.w-half {
+  width: 50%;
+}
+.w-max-content {
+  width: -moz-max-content;
+  width: max-content;
+}
+.w-min-content {
+  width: -moz-min-content;
+  width: min-content;
+}
+
+/* Margins */
+.mx-auto {
+  margin-inline: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Positions */
+.position-relative {
+  position: relative;
+}
+.position-inherit {
+  position: inherit;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-sticky {
+  position: sticky;
+}
+.position-static {
+  position: static;
+}
+.position-fixed {
+  position: fixed;
+}
+
+/** Site Section **/
+.site-section {
+  padding: 32px 16px;
+}
+.site-section__half-top {
+  padding: 32px 16px 24px;
+}
+.site-section__half-bottom {
+  padding: 24px 16px 32px;
+}
+.site-section__no-top {
+  padding: 0px 16px 32px;
+}
+.site-section__no-bottom {
+  padding: 32px 16px 0px;
+}
+.site-section__half-bottom-no-top {
+  padding: 0px 16px 24px;
+}
+.site-section__half-top-no-bottom {
+  padding: 24px 16px 0px;
+}
+.site-section__background {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color-dodge;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background: #FFFFFF;
+  color: #242424;
+  margin: 0;
+}
+
+.site-title__xxxl {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.site-title__xxl {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.site-title__xl {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.17;
+}
+.site-title__lg {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.site-title__md {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.site-title__sm {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.site-subtitle {
+  line-height: 1.2;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 8px;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 14px;
+}
+.site-subtitle h4 {
+  font-weight: 600;
+}
+.site-subtitle.text-center {
+  justify-content: center;
+  margin: auto;
+}
+
+/** Layouts **/
+/** Components **/
+@media (min-width: 767px) and (max-width: 1024px) {
+  .hidden-in-md {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hidden-in-lg {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container {
+    padding-inline: 32px;
+  }
+  .site-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .site-section__half-top {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .site-section__half-bottom {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .site-section__no-top {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  .site-section__no-bottom {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .site-section__half-bottom-no-top {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  .site-section__half-top-no-bottom {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+  .site-title__xxxl {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .site-title__xxl {
+    font-size: 3.625rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .site-title__xl {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .site-title__lg {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .site-title__md {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .site-title__sm {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-inline: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hidden-in-sm {
+    display: none;
+  }
+}
