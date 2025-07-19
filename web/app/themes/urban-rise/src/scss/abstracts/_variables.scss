@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 /** Font Variables*/
 $font-poppins: "Poppins", sans-serif;
 $font-family-default: $font-poppins;
@@ -5,68 +7,53 @@ $font-family-title: $font-poppins;
 $font-size-default: 16px;
 $font-size-title: 18px;
 
+// Replace Color Map with this 
+/** 
+#211F1F
+#F0A500
+#E45826
+#FFFFFF
+#FFFCF5
+#E6D5B8
+#6D6D6D
+#A7A7A7
+#B5B5B5
+#EBEBEB
+**/
+
+$primary-color: #211F1F;
+$secondary-color: #F0A500;
+$tertiary-color: #E45826;
+$white: #FFFFFF;
+$shadow-color:  #FFFCF5;
+
+$lighten: 5%;
+$darken: 25%;
+
+
 /** Color Map **/
 $colors: (
-    color-blue: (
-        10: #CCD5DB,
-        20: #AABAC4,
-        30: #8097A6,
-        40: #557488,
-        50: #2A526B,
-        base: #002F4D,
-        60: #002740,
-        70: #001F33,
-        80: #001827,
-        90: #00101A,
-        100: #00090F
+    primary: (
+        base: $primary-color,
+        light: color.adjust($primary-color, $lightness: $lighten),
+        darken: color.adjust($primary-color, $lightness: -$darken)
     ),
-    color-orange: (
-        10: #FFE6CC,
-        20: #FFD5AA,
-        30: #FFC180,
-        40: #FFAC55,
-        50: #FF972A,
-        base: #FF8200,
-        60: #D56C00,
-        70: #AA5700,
-        80: #804100,
-        90: #552B00,
-        100: #331A00
+    secondary: (
+        base: $secondary-color,
+        light: color.adjust($secondary-color, $lightness: $lighten),
+        darken: color.adjust($secondary-color, $lightness: -$darken)
     ),
-    color-teal: (
-        10: #DEF1F0,
-        20: #C9E7E5,
-        30: #AEDCD9,
-        40: #92D0CC,
-        50: #77C4BF,
-        base: #5CB8B2,
-        60: #4D9994,
-        70: #3D7B77,
-        80: #2E5C59,
-        90: #1F3D3B,
-        100: #122524
+    tertiary: (
+        base: $tertiary-color,
+        light: color.adjust($tertiary-color, $lightness: $lighten),
+        darken: color.adjust($tertiary-color, $lightness: -$darken)
     ), 
-    color-black: (
-        10: #c5c7d5,
-        20: #6B6C77,
-        30: #6c757d,
-        50: #242424,
-        base: #000000
-    ),
-    color-white: (
-        40: #EFF1FF,
-        50: #F3F3F3,
-        base: #FFFFFF,
-    ),
-    input-color: (
-        primary: #007bff,
-        secondary: #6c757d,
-        success: #28a745,
-        info: #17a2b8,
-        warning: #ffc107,
-        danger: #dc3545,
-        light: #f8f9fa,
-        dark: #343a40
+    gray: (
+        1: #6D6D6D,
+        2: #A7A7A7,
+        3: #B5B5B5,
+        4: #EBEBEB,
+        5: #E6D5B8
     )
 );
 
@@ -85,7 +72,7 @@ $breakpoints: (
 ) !default;
 
 $containers: (
-    'lg': 1280px
+    'lg': 1200,
 ) !default;
 
 $padding: (

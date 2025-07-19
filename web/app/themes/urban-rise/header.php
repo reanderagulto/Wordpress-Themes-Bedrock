@@ -18,4 +18,13 @@
 	<!-- <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Mobile Header") ) : ?><?php endif ?> -->
 
 	<div id="main-wrapper">
+		<header id="header" class="header">
+			<div class="header__logo">
+				<a href="<?= home_url() ?>">
+					<?= file_get_contents(get_stylesheet_directory() . '/assets/svg/logo-white.svg') ?>
+				</a>
+			</div>
+			
+		</header>
+
 	    <main id="site-main" class="site-main">	

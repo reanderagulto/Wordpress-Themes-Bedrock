@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use './variables' as *;
 
-@function clr($base, $shade: base) {
+@function color-get($base, $shade: base) {
   @if map.has-key($colors, $base) {
     $color-map: map.get($colors, $base);
 

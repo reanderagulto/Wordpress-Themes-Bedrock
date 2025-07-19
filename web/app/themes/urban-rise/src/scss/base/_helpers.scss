@@ -66,13 +66,6 @@
         text-align: right;
     }
 
-    &-white {
-        color: abs.clr(color-white);
-    }
-
-    &-black {
-        color: abs.clr(color-black, 50);
-    }
 
     &-uppercase {
         text-transform: uppercase;
@@ -84,14 +77,6 @@
 
     &-bold {
         font-weight: 700;
-    }
-
-    &-royal-blue {
-        color: abs.clr(color-blue);
-    }
-
-    &-gray {
-        color: abs.clr(color-black, 20);
     }
 }
 

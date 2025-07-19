@@ -1,68 +1,66 @@
-@use '../abstracts/' as abs;
+@use '../abstracts/' as abstract;
 
 body {
-    font-family: abs.$font-family-default;
-    font-size: abs.$font-size-default;
-    background: abs.clr(color-white);
-    color: abs.clr(color-black, 50);
+    font-family: abstract.$font-family-default;
+    font-size: abstract.$font-size-default;
+    color: abstract.color-get(primary);
     margin: 0;
 }
 
 .site-title {
     &__xxxl {
-        @include abs.font-assign(3.25rem, 700, 1.2); //52px
+        @include abstract.font-assign(3.25rem, 700, 1.2); //52px
     }
 
     &__xxl {
-        @include abs.font-assign(3rem, 700, 1.2); //48px
+        @include abstract.font-assign(3rem, 700, 1.2); //48px
     }
 
     &__xl {
-        @include abs.font-assign(2rem, 700, 1.17); //32px
+        @include abstract.font-assign(2rem, 700, 1.17); //32px
     }
 
     &__lg {
-        @include abs.font-assign(1.5rem, 700, 1); //24px
+        @include abstract.font-assign(1.5rem, 700, 1); //24px
     }
 
     &__md {
-        @include abs.font-assign(1.125rem, 700, 1.2); //18px
+        @include abstract.font-assign(1.125rem, 700, 1.2); //18px
     }
 
     &__sm {
-        @include abs.font-assign(1rem, 700, normal); //16px
+        @include abstract.font-assign(1rem, 700, normal); //16px
     }
 
-    @include abs.media-min(md) {
+    @include abstract.media-min(md) {
         &__xxxl {
-            @include abs.font-assign(3.75rem, 700, 1.2); //60px
+            @include abstract.font-assign(3.75rem, 700, 1.2); //60px
         }
 
         &__xxl {
-            @include abs.font-assign(3.625rem, 700, 1.5); //58px
+            @include abstract.font-assign(3.625rem, 700, 1.5); //58px
         }
 
         &__xl {
-            @include abs.font-assign(2.5rem, 700, 1.2); //40px
+            @include abstract.font-assign(2.5rem, 700, 1.2); //40px
         }
 
         &__lg {
-            @include abs.font-assign(2rem, 700, 1.2); //32px
+            @include abstract.font-assign(2rem, 700, 1.2); //32px
         }
 
         &__md {
-            @include abs.font-assign(1.5rem, 700, 1.2); //24px
+            @include abstract.font-assign(1.5rem, 700, 1.2); //24px
         }
 
         &__sm {
-            @include abs.font-assign(1.125rem, 700, normal); //18px
+            @include abstract.font-assign(1.125rem, 700, normal); //18px
         }
     }
 }
 
 .site-subtitle {
     line-height: 1.2;
-    color: abs.clr(color-black, 50);
     display: flex;
     align-items: center;
     gap: 8px;

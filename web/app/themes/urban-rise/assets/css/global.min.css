@@ -5,6 +5,18 @@
  ********************/
 /** Base Styling **/
 /** Font Variables*/
+/** 
+#211F1F
+#F0A500
+#E45826
+#FFFFFF
+#FFFCF5
+#E6D5B8
+#6D6D6D
+#A7A7A7
+#B5B5B5
+#EBEBEB
+**/
 /** Color Map **/
 /** Global Transition **/
 /** Breakpoints **/
@@ -86,7 +98,7 @@ textarea:not([rows]) {
 /* Container */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200;
   margin-inline: auto;
   padding-inline: 20px;
 }
@@ -113,12 +125,6 @@ textarea:not([rows]) {
 .text-right {
   text-align: right;
 }
-.text-white {
-  color: #FFFFFF;
-}
-.text-black {
-  color: #242424;
-}
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -127,12 +133,6 @@ textarea:not([rows]) {
 }
 .text-bold {
   font-weight: 700;
-}
-.text-royal-blue {
-  color: #002F4D;
-}
-.text-gray {
-  color: #6B6C77;
 }
 
 /* Flex */
@@ -308,8 +308,7 @@ textarea:not([rows]) {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background: #FFFFFF;
-  color: #242424;
+  color: #211F1F;
   margin: 0;
 }
 
@@ -346,7 +345,6 @@ body {
 
 .site-subtitle {
   line-height: 1.2;
-  color: #242424;
   display: flex;
   align-items: center;
   gap: 8px;
